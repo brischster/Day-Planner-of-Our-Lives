@@ -1,6 +1,6 @@
 var saveBtn = $(".saveBtn");
 var dateEl = $("#currentDay");
-var columnEl = $(".colorByTime");
+// var columnEl = $(".colorByTime");
 var currentID = $(".getId");
 // console.log(currentID);
 // console.log(currentID[2].id);
@@ -16,10 +16,14 @@ var currentID = $(".getId");
 
 function init() {
   function colorRows() {
-    //   var rowColor =
+    // var columnEl = document.getElementsByClassName("colorByTime");
+    // var rowColor = [].map.call(columnEl, function (el) {
+    //   return el.getAttribute("videofile");
+    //   console.log(el);
+    // });
+    // el();
     var hours = moment().format("H");
-    // for (var i = 0; i < currentID.length - 1; i++) {
-    //   //   console.log(currentID[i]);
+
     if (currentID[0].id === hours) {
       //     console.log(currentID[i].id === hours);
       $("#byTime09").css({ background: "#ff6961", color: "white" }); // I need to tell it which specific column to be changing the color on (something to do with columnEL)
@@ -98,6 +102,9 @@ function init() {
     } else {
       $("#byTime17").css({ background: "#77dd77", color: "white" });
     }
+
+    // for (var i = 0; i < currentID.length - 1; i++) {
+    //   //   console.log(currentID[i]);
     //   if (currentID[i].id < hours) {
     //     console.log(currentID[i].id < hours);
     //     $(".colorByTime").css({ background: "#d3d3d3", color: "white" });
