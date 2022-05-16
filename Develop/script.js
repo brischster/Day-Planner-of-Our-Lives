@@ -2,6 +2,8 @@ var saveBtn = $(".saveBtn");
 var dateEl = $("#currentDay");
 // var columnEl = $(".colorByTime");
 var currentID = $(".getId");
+// var tableRoot = $("#top");
+// var textArea = $(tableRoot.children().children().children().children().children().eq());
 // console.log(currentID);
 // console.log(currentID[2].id);
 // var hours = moment().format("H");
@@ -9,10 +11,9 @@ var currentID = $(".getId");
 // console.log(hours === currentID[2].id);
 
 // var currentTimeSlot = $(".getID");
-// var currentID = document.querySelectorAll("[id^=box]"); making the id an array to try and loop over in the rendertask function
+// var currentID = document.querySelectorAll("[id^=box]");
+// //making the id an array to try and loop over in the rendertask function
 // console.log(currentID);
-// 012;
-// console.log(timeID);
 
 function init() {
   function colorRows() {
@@ -148,7 +149,10 @@ $("#17").siblings("td").children().val(localStorage.getItem("17"));
 
 // function renderTask() {
 //   for (var i = 0; i < currentID.length; i++) {
-//     $("currentID[i]")
+//       var textArea = $(
+//         tableRoot.children().children().children().children().children().eq(i)
+//       );
+//     currentID[i]
 //       .siblings("td")
 //       .children()
 //       .val(localStorage.getItem("timeID[i]"));
@@ -157,7 +161,3 @@ $("#17").siblings("td").children().val(localStorage.getItem("17"));
 // }
 
 // renderTask();
-
-// if row time less than current time, color grey
-// if row time equals current hour, color red
-// if row time greater than current hour, color green
